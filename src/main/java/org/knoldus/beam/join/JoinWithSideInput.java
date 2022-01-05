@@ -64,9 +64,7 @@ public class JoinWithSideInput {
                 Integer score = customerScores.get(element.getKey());
                 LOGGER.info("customerId :{} , Gender: {} , spending score: {}",
                         element.getKey(), element.getValue(), score);
-
             }
-
         }).withSideInputs(customerScoreView));
 
         pipeline.run().waitUntilFinish();
